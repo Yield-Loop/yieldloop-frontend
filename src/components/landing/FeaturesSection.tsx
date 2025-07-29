@@ -13,7 +13,6 @@ const FeaturesSection = () => {
       <section
         className="relative hidden lg:block"
         style={{
-          width: "3000px",
           height: "222.5px",
           left: "50%",
           transform: "translateX(-50%)",
