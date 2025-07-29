@@ -1,5 +1,5 @@
 // Landing Page Components (uncomment as you implement each section)
-// import HeroSection from '@/components/landing/HeroSection';
+import HeroSection from '@/components/landing/HeroSection';
 // import AboutSection from '@/components/landing/AboutSection';
 import FeaturesSection from '@/components/landing/FeaturesSection';
 // import StatsSection from '@/components/landing/StatsSection';
@@ -18,7 +18,7 @@ export default function Home() {
       {/* Main Landing Page Content */}
       <main className="flex-1">
         {/* Hero Section - Main banner with CTA buttons */}
-        {/* <HeroSection /> */}
+        <HeroSection />
 
         {/* About Section - Explanation of YieldLoop */}
         {/* <AboutSection /> */}
