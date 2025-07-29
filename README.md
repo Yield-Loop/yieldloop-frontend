@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+## 🌀 YieldLoop Frontend
 
-First, run the development server:
+This is the frontend codebase for YieldLoop— a decentralized yield protocol. This repo is actively in development.
+
+---
+
+### 🚧 Project Status
+
+* **Figma Design:** [View on Figma](https://www.figma.com/proto/dmfaKbC9of6ZzLuc8augBG/YieldLoop?page-id=0%3A1&node-id=65-33&viewport=262%2C-74%2C0.71&t=LMZ9lV11IR39F4iC-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=65%3A33)
+
+* **Frontend Framework:** Next.js 15 + React 19 + TypeScript + Tailwind CSS v4
+* **Branch Strategy:** All active development happens on the `staging` branch.
+
+---
+
+### 🛠️ Getting Started
 
 ```bash
+git clone https://github.com/Yield-Loop/yieldloop-frontend.git
+cd yieldloop-frontend
+git checkout staging
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 🔁 Contribution Workflow
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+#### 1. **Create Your Branch from `staging`**
 
-## Learn More
+```bash
+git checkout staging
+git pull origin staging
+git checkout -b feat/your-feature-name
+```
 
-To learn more about Next.js, take a look at the following resources:
+#### 2. **Do Your Work Locally**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* Follow the design on Figma.
+* Make sure your section/component is responsive.
+* Keep code clean and commit often.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+#### 3. **Push to GitHub**
 
-## Deploy on Vercel
+```bash
+git add .
+git commit -m "feat: added [your feature]"
+git push origin feat/your-feature-name
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+#### 4. **Open a Pull Request**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+* Go to GitHub → Pull Requests → New
+* **Base branch:** `staging`
+* **Compare branch:** `feat/your-feature-name`
+* Add description .
+* **Tag `@Kanasjnr` for review.**
+
+#### 5. **Merge to `main`**
+
+* Once approved, `@kanasjnr` will handle merging to `main` for production/stable updates.
+
+---
+
+### 📁 Folder Structure
+
+```
+/src
+  /app          # Next.js App Router pages
+  /components   # Reusable React components
+  /assets       # Static assets (images, icons, etc.)
+  /hooks        # Custom React hooks
+  /utils        # Utility functions
+```
+
+---
+
+### 📬 Contact
+
+For questions or support, please reach out to Kanas_01 on Telegram.
+
+
