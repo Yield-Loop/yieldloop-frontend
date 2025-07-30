@@ -1,6 +1,10 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 
 const HeroSection: React.FC = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   return (
     <div
       className="min-h-screen bg-white relative overflow-hidden font-sans"
@@ -8,7 +12,7 @@ const HeroSection: React.FC = () => {
     >
       {/* Main blue gradient background blob */}
       <div
-        className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/3 w-[1400px] h-[1000px]"
+        className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/3 w-[800px] md:w-[1200px] lg:w-[1400px] h-[600px] md:h-[800px] lg:h-[1000px]"
         style={{
           backgroundImage: "url(/shield.png)",
           backgroundSize: "contain",
@@ -36,34 +40,12 @@ const HeroSection: React.FC = () => {
       />
 
       {/* Navigation */}
-      <nav
-        className="relative z-20 bg-white"
-        style={{
-          position: "relative",
-          zIndex: 20,
-          backgroundColor: "white",
-          width: "100%",
-          borderBottom: "none",
-          outline: "none",
-        }}
-      >
-        <div
-          className="flex items-center justify-between px-6 lg:px-16 py-4 max-w-7xl mx-auto"
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            padding: "1rem 1.5rem",
-            maxWidth: "80rem",
-            margin: "0 auto",
-            border: "none",
-            outline: "none",
-          }}
-        >
+      <nav className="relative z-30 bg-white border-b border-gray-100">
+        <div className="flex items-center justify-between px-4 sm:px-6 lg:px-16 py-4 max-w-7xl mx-auto">
           {/* Brand */}
           <div className="flex flex-col">
             <div
-              className="bg-clip-text text-transparent"
+              className="bg-clip-text text-transparent text-xl sm:text-2xl lg:text-3xl"
               style={{
                 background:
                   "linear-gradient(92deg, #00D2FF 1.69%, #7C3AED 101.93%)",
@@ -72,7 +54,6 @@ const HeroSection: React.FC = () => {
                 backgroundClip: "text",
                 fontFamily: "Gotham",
                 fontWeight: 350,
-                fontSize: "28px",
                 lineHeight: "100%",
                 letterSpacing: "0%",
               }}
@@ -80,7 +61,7 @@ const HeroSection: React.FC = () => {
               YieldLoop
             </div>
             <div
-              className="text-[14px] uppercase tracking-[0.15em] font-medium"
+              className="text-xs sm:text-sm uppercase tracking-[0.15em] font-medium"
               style={{
                 color: "#1C1C1C80",
               }}
@@ -89,150 +70,185 @@ const HeroSection: React.FC = () => {
             </div>
           </div>
 
-          {/* Navigation Links */}
-          <div
-            className="flex items-center space-x-8"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "2rem",
-              border: "none",
-              outline: "none",
-            }}
-          >
+          {/* Desktop Navigation Links */}
+          <div className="hidden lg:flex items-center space-x-8">
             <a
               href="#features"
-              className="hover:text-gray-900 transition-colors duration-200"
+              className="hover:text-gray-900 transition-colors duration-200 text-base xl:text-lg"
               style={{
                 fontFamily: "Gotham",
                 fontWeight: 325,
-                fontSize: "18px",
                 lineHeight: "100%",
                 letterSpacing: "0%",
                 color: "#1C1C1C",
                 textDecoration: "none",
-                border: "none",
-                outline: "none",
-                display: "inline-block",
               }}
             >
               Features
             </a>
             <a
               href="#how-it-works"
-              className="hover:text-gray-900 transition-colors duration-200"
+              className="hover:text-gray-900 transition-colors duration-200 text-base xl:text-lg"
               style={{
                 fontFamily: "Gotham",
                 fontWeight: 325,
-                fontSize: "18px",
                 lineHeight: "100%",
                 letterSpacing: "0%",
                 color: "#1C1C1C",
                 textDecoration: "none",
-                border: "none",
-                outline: "none",
-                display: "inline-block",
               }}
             >
               How it works
             </a>
             <a
               href="#tokenomics"
-              className="hover:text-gray-900 transition-colors duration-200"
+              className="hover:text-gray-900 transition-colors duration-200 text-base xl:text-lg"
               style={{
                 fontFamily: "Gotham",
                 fontWeight: 325,
-                fontSize: "18px",
                 lineHeight: "100%",
                 letterSpacing: "0%",
                 color: "#1C1C1C",
                 textDecoration: "none",
-                border: "none",
-                outline: "none",
-                display: "inline-block",
               }}
             >
               Tokenomics
             </a>
             <a
               href="#docs"
-              className="hover:text-gray-900 transition-colors duration-200"
+              className="hover:text-gray-900 transition-colors duration-200 text-base xl:text-lg"
               style={{
                 fontFamily: "Gotham",
                 fontWeight: 325,
-                fontSize: "18px",
                 lineHeight: "100%",
                 letterSpacing: "0%",
                 color: "#1C1C1C",
                 textDecoration: "none",
-                border: "none",
-                outline: "none",
-                display: "inline-block",
               }}
             >
               Docs
             </a>
           </div>
 
-          {/* Action Buttons */}
-          <div className="flex items-center space-x-3">
+          {/* Desktop Action Button */}
+          <div className="hidden sm:flex items-center">
             <button
-              className="hover:shadow-lg transition-all duration-200"
+              className="hover:shadow-lg transition-all duration-200 px-4 py-2 sm:px-6 sm:py-3 rounded-lg text-sm sm:text-base"
               style={{
-                width: "140px",
-                height: "47px",
-                borderRadius: "10px",
-                paddingTop: "10px",
-                paddingRight: "15px",
-                paddingBottom: "10px",
-                paddingLeft: "15px",
                 background:
                   "linear-gradient(99.92deg, rgba(0, 210, 255, 0.95) 5.17%, rgba(124, 58, 237, 0.95) 100.44%)",
                 fontFamily: "Gotham",
                 fontWeight: 700,
-                fontSize: "18px",
                 lineHeight: "100%",
                 letterSpacing: "0%",
                 textAlign: "center",
                 color: "white",
-                opacity: 1,
                 border: "none",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
               }}
             >
               Join waitlist
             </button>
           </div>
+
+          {/* Mobile menu button */}
+          <button
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="lg:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+          >
+            <svg
+              className="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              {isMobileMenuOpen ? (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M6 18L18 6M6 6l12 12"
+                />
+              ) : (
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              )}
+            </svg>
+          </button>
         </div>
+
+        {/* Mobile Navigation Menu */}
+        {isMobileMenuOpen && (
+          <div className="lg:hidden bg-white border-t border-gray-100">
+            <div className="px-4 py-2 space-y-1">
+              <a
+                href="#features"
+                className="block px-3 py-2 text-gray-900 hover:bg-gray-50 rounded-md"
+                style={{ fontFamily: "Gotham", fontWeight: 325 }}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Features
+              </a>
+              <a
+                href="#how-it-works"
+                className="block px-3 py-2 text-gray-900 hover:bg-gray-50 rounded-md"
+                style={{ fontFamily: "Gotham", fontWeight: 325 }}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                How it works
+              </a>
+              <a
+                href="#tokenomics"
+                className="block px-3 py-2 text-gray-900 hover:bg-gray-50 rounded-md"
+                style={{ fontFamily: "Gotham", fontWeight: 325 }}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Tokenomics
+              </a>
+              <a
+                href="#docs"
+                className="block px-3 py-2 text-gray-900 hover:bg-gray-50 rounded-md"
+                style={{ fontFamily: "Gotham", fontWeight: 325 }}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Docs
+              </a>
+              <div className="pt-2">
+                <button
+                  className="w-full hover:shadow-lg transition-all duration-200 px-4 py-3 rounded-lg text-sm"
+                  style={{
+                    background:
+                      "linear-gradient(99.92deg, rgba(0, 210, 255, 0.95) 5.17%, rgba(124, 58, 237, 0.95) 100.44%)",
+                    fontFamily: "Gotham",
+                    fontWeight: 700,
+                    lineHeight: "100%",
+                    letterSpacing: "0%",
+                    textAlign: "center",
+                    color: "white",
+                    border: "none",
+                  }}
+                >
+                  Join waitlist
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
       </nav>
 
       {/* Hero Content */}
-      <main
-        className="relative z-20 flex flex-col items-center justify-center text-center px-8 pt-32 pb-32 max-w-7xl mx-auto"
-        style={{ marginTop: "40px" }}
-      >
+      <main className="relative z-20 flex flex-col items-center justify-center text-center px-4 sm:px-8 pt-16 sm:pt-24 lg:pt-32 pb-16 sm:pb-24 lg:pb-32 max-w-7xl mx-auto">
         {/* Main Heading */}
-        <h1
-          className="mb-8"
-          style={{
-            fontFamily:
-              "Gotham, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
-            fontWeight: 700,
-            fontSize: "80px",
-            lineHeight: "100%",
-            letterSpacing: "0%",
-            textAlign: "center",
-          }}
-        >
+        <h1 className="mb-6 sm:mb-8">
           <div
-            className="text-gray-900 mb-6"
+            className="text-gray-900 mb-4 sm:mb-6 text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl"
             style={{
               fontFamily:
                 "Gotham, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
               fontWeight: 700,
-              fontSize: "80px",
               lineHeight: "100%",
               letterSpacing: "0%",
               textAlign: "center",
@@ -241,12 +257,11 @@ const HeroSection: React.FC = () => {
             Redefine Capital Efficiency
           </div>
           <div
-            className="text-gray-900"
+            className="text-gray-900 text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl"
             style={{
               fontFamily:
                 "Gotham, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
               fontWeight: 700,
-              fontSize: "80px",
               lineHeight: "100%",
               letterSpacing: "0%",
               textAlign: "center",
@@ -264,7 +279,6 @@ const HeroSection: React.FC = () => {
                 fontFamily:
                   "Gotham, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
                 fontWeight: 700,
-                fontSize: "80px",
                 lineHeight: "100%",
                 letterSpacing: "0%",
               }}
@@ -276,51 +290,40 @@ const HeroSection: React.FC = () => {
 
         {/* Subtitle */}
         <p
-          className="max-w-4xl mx-auto mb-16"
+          className="max-w-4xl mx-auto mb-8 sm:mb-12 lg:mb-16 text-sm sm:text-lg md:text-xl lg:text-2xl px-4"
           style={{
             color: "#1C1C1C80",
             fontFamily: "Gotham",
             fontWeight: 325,
-            fontSize: "25px",
-            lineHeight: "100%",
+            lineHeight: "130%",
             letterSpacing: "0%",
             textAlign: "center",
           }}
         >
           Stake $PHRS, mint liquid tokens, and unlock seamless DeFi
           opportunities on
-          <br />
+          <br className="hidden sm:block" />
+          <span className="sm:hidden"> </span>
           Pharos without lockups or bridge dependencies
         </p>
 
         {/* Action Buttons */}
-        <div className="flex items-center" style={{ gap: "10px" }}>
+        <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 w-full sm:w-auto">
           <button
-            className="hover:shadow-xl transition-all duration-300 flex items-center justify-center font-semibold"
+            className="w-full sm:w-auto hover:shadow-xl transition-all duration-300 flex items-center justify-center font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-sm sm:text-base"
             style={{
-              width: "179px",
-              height: "47px",
-              borderRadius: "10px",
-              paddingTop: "10px",
-              paddingRight: "15px",
-              paddingBottom: "10px",
-              paddingLeft: "10px",
               background: "linear-gradient(to right, #3ecbff, #6c4cff)",
-              opacity: 1,
-              fontSize: "16px",
-              fontWeight: "600",
-              border: "none",
-              gap: "8px",
               color: "#F5F5F5",
+              border: "none",
+              minWidth: "180px",
             }}
           >
             <span>Join waitlist</span>
             <svg
-              className="w-5 h-5"
+              className="w-4 h-4 sm:w-5 sm:h-5 ml-2"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
-              style={{ width: "20px", height: "20px" }}
             >
               <path
                 strokeLinecap="round"
@@ -332,20 +335,9 @@ const HeroSection: React.FC = () => {
           </button>
 
           <button
-            className="border border-gray-300 text-gray-700 hover:border-gray-400 hover:bg-gray-50 transition-all duration-300 font-semibold flex items-center justify-center"
+            className="w-full sm:w-auto border border-gray-300 text-gray-700 hover:border-gray-400 hover:bg-gray-50 transition-all duration-300 font-semibold flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-sm sm:text-base"
             style={{
-              width: "179px",
-              height: "47px",
-              borderRadius: "10px",
-              paddingTop: "10px",
-              paddingRight: "15px",
-              paddingBottom: "10px",
-              paddingLeft: "10px",
-              opacity: 1,
-              fontSize: "16px",
-              fontWeight: "600",
-              borderColor: "#d1d5db",
-              color: "#374151",
+              minWidth: "180px",
             }}
           >
             Explore protocol

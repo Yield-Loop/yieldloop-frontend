@@ -299,13 +299,24 @@ const FeaturesSection = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header Section */}
           <div className="text-center mb-12 md:mb-16 lg:mb-20">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 md:mb-6 leading-tight">
+            <h2 
+              className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 md:mb-6 leading-tight"
+              style={{
+                fontFamily: "Gotham, sans-serif",
+              }}
+            >
               Unlock the Power of{" "}
               <span className="bg-gradient-to-r from-[#00D2FF] to-[#7C3AED] bg-clip-text text-transparent">
                 Liquid Restaking
               </span>
             </h2>
-            <p className="text-base md:text-lg lg:text-xl max-w-4xl mx-auto leading-relaxed text-gray-600 px-4">
+            <p 
+              className="text-base md:text-lg lg:text-xl max-w-4xl mx-auto leading-relaxed text-gray-600 px-4"
+              style={{
+                fontFamily: "Gotham, sans-serif",
+                fontWeight: 325,
+              }}
+            >
               YieldLoop transforms traditional staking by providing liquidity,
               composability, and enhanced yield opportunity on the Pharos
               blockchain.
@@ -326,10 +337,26 @@ const FeaturesSection = () => {
                   className="w-full h-full object-cover" 
                 />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4 leading-tight">
+              <h3 
+                className="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4 leading-tight"
+                style={{
+                  fontFamily: "Gotham, sans-serif",
+                }}
+              >
                 Liquid Staking
               </h3>
-              <p className="text-sm md:text-base lg:text-lg text-gray-600 leading-relaxed">
+              <p 
+                className="leading-relaxed"
+                style={{
+                  fontFamily: "Gotham, sans-serif",
+                  fontWeight: 325,
+                  fontStyle: "Book",
+                  fontSize: "18px",
+                  lineHeight: "100%",
+                  letterSpacing: "0%",
+                  color: "#1C1C1C80",
+                }}
+              >
                 Stake $PHRS and receive yPHR liquid tokens that maintain DeFi
                 composability while earning staking rewards.
               </p>
@@ -346,10 +373,26 @@ const FeaturesSection = () => {
                   className="w-full h-full object-cover" 
                 />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4 leading-tight">
+              <h3 
+                className="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4 leading-tight"
+                style={{
+                  fontFamily: "Gotham, sans-serif",
+                }}
+              >
                 Restaking
               </h3>
-              <p className="text-sm md:text-base lg:text-lg text-gray-600 leading-relaxed">
+              <p 
+                className="leading-relaxed"
+                style={{
+                  fontFamily: "Gotham, sans-serif",
+                  fontWeight: 325,
+                  fontStyle: "Book",
+                  fontSize: "18px",
+                  lineHeight: "100%",
+                  letterSpacing: "0%",
+                  color: "#1C1C1C80",
+                }}
+              >
                 Leverage existing Pharos validators to restake into Special
                 Processing Networks for enhanced yield generation.
               </p>
@@ -366,10 +409,26 @@ const FeaturesSection = () => {
                   className="w-full h-full object-cover" 
                 />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4 leading-tight">
+              <h3 
+                className="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4 leading-tight"
+                style={{
+                  fontFamily: "Gotham, sans-serif",
+                }}
+              >
                 No Liquidity Lockups
               </h3>
-              <p className="text-sm md:text-base lg:text-lg text-gray-600 leading-relaxed">
+              <p 
+                className="leading-relaxed"
+                style={{
+                  fontFamily: "Gotham, sans-serif",
+                  fontWeight: 325,
+                  fontStyle: "Book",
+                  fontSize: "18px",
+                  lineHeight: "100%",
+                  letterSpacing: "0%",
+                  color: "#1C1C1C80",
+                }}
+              >
                 Trade, lend, or use yPHR in DeFi protocols immediately without
                 waiting for unbonding periods.
               </p>
@@ -386,10 +445,26 @@ const FeaturesSection = () => {
                   className="w-full h-full object-cover" 
                 />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4 leading-tight">
+              <h3 
+                className="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4 leading-tight"
+                style={{
+                  fontFamily: "Gotham, sans-serif",
+                }}
+              >
                 Transparent Rewards
               </h3>
-              <p className="text-sm md:text-base lg:text-lg text-gray-600 leading-relaxed">
+              <p 
+                className="leading-relaxed"
+                style={{
+                  fontFamily: "Gotham, sans-serif",
+                  fontWeight: 325,
+                  fontStyle: "Book",
+                  fontSize: "18px",
+                  lineHeight: "100%",
+                  letterSpacing: "0%",
+                  color: "#1C1C1C80",
+                }}
+              >
                 Track all rewards through our internal rPHR ledger system with
                 complete transparency and real-time updates.
               </p>
@@ -406,10 +481,26 @@ const FeaturesSection = () => {
                   className="w-full h-full object-cover" 
                 />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4 leading-tight">
+              <h3 
+                className="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4 leading-tight"
+                style={{
+                  fontFamily: "Gotham, sans-serif",
+                }}
+              >
                 Native Security
               </h3>
-              <p className="text-sm md:text-base lg:text-lg text-gray-600 leading-relaxed">
+              <p 
+                className="leading-relaxed"
+                style={{
+                  fontFamily: "Gotham, sans-serif",
+                  fontWeight: 325,
+                  fontStyle: "Book",
+                  fontSize: "18px",
+                  lineHeight: "100%",
+                  letterSpacing: "0%",
+                  color: "#1C1C1C80",
+                }}
+              >
                 Built natively on Pharos with no bridge dependencies, ensuring
                 maximum security and decentralization.
               </p>
@@ -426,10 +517,26 @@ const FeaturesSection = () => {
                   className="w-full h-full object-cover" 
                 />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4 leading-tight">
+              <h3 
+                className="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4 leading-tight"
+                style={{
+                  fontFamily: "Gotham, sans-serif",
+                }}
+              >
                 Ecosystem Growth
               </h3>
-              <p className="text-sm md:text-base lg:text-lg text-gray-600 leading-relaxed">
+              <p 
+                className="leading-relaxed"
+                style={{
+                  fontFamily: "Gotham, sans-serif",
+                  fontWeight: 325,
+                  fontStyle: "Book",
+                  fontSize: "18px",
+                  lineHeight: "100%",
+                  letterSpacing: "0%",
+                  color: "#1C1C1C80",
+                }}
+              >
                 Participate in Pharos ecosystem expansion while contributing to
                 network security and earning rewards.
               </p>
