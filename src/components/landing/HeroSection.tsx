@@ -310,7 +310,7 @@ const HeroSection: React.FC = () => {
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 w-full sm:w-auto">
           <button
-            className="w-full sm:w-auto hover:shadow-xl transition-all duration-300 flex items-center justify-center font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-sm sm:text-base"
+            className="w-full sm:w-auto hover:shadow-xl transition-all duration-300 flex items-center justify-center font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-sm sm:text-base join-waitlist-btn"
             style={{
               background: "linear-gradient(to right, #3ecbff, #6c4cff)",
               color: "#F5F5F5",
@@ -318,9 +318,9 @@ const HeroSection: React.FC = () => {
               minWidth: "180px",
             }}
           >
-            <span>Join waitlist</span>
+            <span className="join-waitlist-text">Join waitlist</span>
             <svg
-              className="w-4 h-4 sm:w-5 sm:h-5 ml-2"
+              className="w-4 h-4 sm:w-5 sm:h-5 ml-2 join-waitlist-arrow"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -335,8 +335,8 @@ const HeroSection: React.FC = () => {
           </button>
 
           <button
-            className="w-full sm:w-auto border border-gray-300 text-gray-700 hover:border-gray-400 hover:bg-gray-50 transition-all duration-300 font-semibold flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-sm sm:text-base"
-            style={{
+            className="w-full sm:w-auto font-semibold flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 rounded-lg text-sm sm:text-base custom-explore-btn"
+            style={{ 
               minWidth: "180px",
             }}
           >
