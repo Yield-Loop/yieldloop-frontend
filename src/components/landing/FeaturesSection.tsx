@@ -13,7 +13,6 @@ const FeaturesSection = () => {
       <section
         className="relative hidden lg:block"
         style={{
-          width: "3000px",
           height: "222.5px",
           left: "50%",
           transform: "translateX(-50%)",
@@ -48,20 +47,16 @@ const FeaturesSection = () => {
               }}
             >
               <div className="flex justify-center mb-3">
-                <div
-                  className="rounded-2xl flex items-center justify-center shadow-lg"
-                  style={{
-                    width: "95px",
-                    height: "95px",
-                    paddingTop: "21px",
-                    paddingRight: "22px",
-                    paddingBottom: "21px",
-                    paddingLeft: "22px",
-                    background: "#00D2FF1A",
-                  }}
-                >
+                <div className="relative w-[95px] h-[95px] flex items-center justify-center">
+                  <Image 
+                    src="/secure.png" 
+                    alt="Secure Background" 
+                    width={95} 
+                    height={95} 
+                    className="w-full h-full object-contain" 
+                  />
                   <Shield 
-                    className="w-12 h-12" 
+                    className="w-12 h-12 absolute" 
                     style={{ color: "#00D2FF" }}
                   />
                 </div>
@@ -115,20 +110,16 @@ const FeaturesSection = () => {
               }}
             >
               <div className="flex justify-center mb-1" style={{ marginTop: "20px" }}>
-                <div
-                  className="rounded-2xl flex items-center justify-center shadow-lg relative"
-                  style={{
-                    width: "95px",
-                    height: "95px",
-                    paddingTop: "21px",
-                    paddingRight: "22px",
-                    paddingBottom: "21px",
-                    paddingLeft: "22px",
-                    background: "#7C3AED33",
-                  }}
-                >
+                <div className="relative w-[95px] h-[95px] flex items-center justify-center">
+                  <Image 
+                    src="/liquid.png" 
+                    alt="Liquid Background" 
+                    width={95} 
+                    height={95} 
+                    className="w-full h-full object-contain" 
+                  />
                   <Zap
-                    className="text-purple-600"
+                    className="text-purple-600 absolute"
                     style={{
                       width: "32.14285659790039px",
                       height: "46.42856979370117px",
@@ -182,21 +173,16 @@ const FeaturesSection = () => {
               }}
             >
               <div className="flex justify-center mb-3">
-                <div
-                  className="rounded-2xl flex items-center justify-center"
-                  style={{
-                    width: "95px",
-                    height: "95px",
-                    paddingTop: "21px",
-                    paddingRight: "22px",
-                    paddingBottom: "21px",
-                    paddingLeft: "22px",
-                    background: "#00FF2212",
-                    boxShadow: "0px 4px 4px 0px #00000040",
-                  }}
-                >
+                <div className="relative w-[95px] h-[95px] flex items-center justify-center">
+                  <Image 
+                    src="/Frame 10.png" 
+                    alt="High Yield Background" 
+                    width={95} 
+                    height={95} 
+                    className="w-full h-full object-contain" 
+                  />
                   <TrendingUp 
-                    className="w-12 h-12" 
+                    className="w-12 h-12 absolute" 
                     style={{ color: "#00FF22" }}
                   />
                 </div>
@@ -244,9 +230,16 @@ const FeaturesSection = () => {
             {/* Secure Feature */}
             <div className="text-center flex flex-col items-center space-y-4 md:space-y-6">
               <div className="flex justify-center">
-                <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl flex items-center justify-center shadow-lg bg-[#00D2FF1A]">
+                <div className="relative w-16 h-16 md:w-20 md:h-20 flex items-center justify-center">
+                  <Image 
+                    src="/secure.png" 
+                    alt="Secure Background" 
+                    width={80} 
+                    height={80} 
+                    className="w-full h-full object-contain" 
+                  />
                   <Shield 
-                    className="w-8 h-8 md:w-10 md:h-10" 
+                    className="w-8 h-8 md:w-10 md:h-10 absolute" 
                     style={{ color: "#00D2FF" }}
                   />
                 </div>
@@ -262,8 +255,15 @@ const FeaturesSection = () => {
             {/* Liquid Feature - Center */}
             <div className="text-center flex flex-col items-center space-y-4 md:space-y-6">
               <div className="flex justify-center">
-                <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl flex items-center justify-center shadow-lg bg-[#7C3AED33]">
-                  <Zap className="w-8 h-8 md:w-10 md:h-10 text-purple-600" />
+                <div className="relative w-16 h-16 md:w-20 md:h-20 flex items-center justify-center">
+                  <Image 
+                    src="/liquid.png" 
+                    alt="Liquid Background" 
+                    width={80} 
+                    height={80} 
+                    className="w-full h-full object-contain" 
+                  />
+                  <Zap className="w-8 h-8 md:w-10 md:h-10 text-purple-600 absolute" />
                 </div>
               </div>
               <h3 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-[#00D2FF] to-[#7C3AED] bg-clip-text text-transparent">
@@ -277,9 +277,16 @@ const FeaturesSection = () => {
             {/* High Yield Feature */}
             <div className="text-center flex flex-col items-center space-y-4 md:space-y-6">
               <div className="flex justify-center">
-                <div className="w-16 h-16 md:w-20 md:h-20 rounded-2xl flex items-center justify-center shadow-lg bg-[#00FF2212]">
+                <div className="relative w-16 h-16 md:w-20 md:h-20 flex items-center justify-center">
+                  <Image 
+                    src="/Frame 10.png" 
+                    alt="High Yield Background" 
+                    width={80} 
+                    height={80} 
+                    className="w-full h-full object-contain" 
+                  />
                   <TrendingUp 
-                    className="w-8 h-8 md:w-10 md:h-10" 
+                    className="w-8 h-8 md:w-10 md:h-10 absolute" 
                     style={{ color: "#00FF22" }}
                   />
                 </div>
@@ -300,13 +307,24 @@ const FeaturesSection = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header Section */}
           <div className="text-center mb-12 md:mb-16 lg:mb-20">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 md:mb-6 leading-tight">
+            <h2 
+              className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 md:mb-6 leading-tight"
+              style={{
+                fontFamily: "Gotham, sans-serif",
+              }}
+            >
               Unlock the Power of{" "}
               <span className="bg-gradient-to-r from-[#00D2FF] to-[#7C3AED] bg-clip-text text-transparent">
                 Liquid Restaking
               </span>
             </h2>
-            <p className="text-base md:text-lg lg:text-xl max-w-4xl mx-auto leading-relaxed text-gray-600 px-4">
+            <p 
+              className="text-base md:text-lg lg:text-xl max-w-4xl mx-auto leading-relaxed text-gray-600 px-4"
+              style={{
+                fontFamily: "Gotham, sans-serif",
+                fontWeight: 325,
+              }}
+            >
               YieldLoop transforms traditional staking by providing liquidity,
               composability, and enhanced yield opportunity on the Pharos
               blockchain.
@@ -327,10 +345,26 @@ const FeaturesSection = () => {
                   className="w-full h-full object-cover" 
                 />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4 leading-tight">
+              <h3 
+                className="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4 leading-tight"
+                style={{
+                  fontFamily: "Gotham, sans-serif",
+                }}
+              >
                 Liquid Staking
               </h3>
-              <p className="text-sm md:text-base lg:text-lg text-gray-600 leading-relaxed">
+              <p 
+                className="leading-relaxed"
+                style={{
+                  fontFamily: "Gotham, sans-serif",
+                  fontWeight: 325,
+                  fontStyle: "Book",
+                  fontSize: "18px",
+                  lineHeight: "100%",
+                  letterSpacing: "0%",
+                  color: "#1C1C1C80",
+                }}
+              >
                 Stake $PHRS and receive yPHR liquid tokens that maintain DeFi
                 composability while earning staking rewards.
               </p>
@@ -347,10 +381,26 @@ const FeaturesSection = () => {
                   className="w-full h-full object-cover" 
                 />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4 leading-tight">
+              <h3 
+                className="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4 leading-tight"
+                style={{
+                  fontFamily: "Gotham, sans-serif",
+                }}
+              >
                 Restaking
               </h3>
-              <p className="text-sm md:text-base lg:text-lg text-gray-600 leading-relaxed">
+              <p 
+                className="leading-relaxed"
+                style={{
+                  fontFamily: "Gotham, sans-serif",
+                  fontWeight: 325,
+                  fontStyle: "Book",
+                  fontSize: "18px",
+                  lineHeight: "100%",
+                  letterSpacing: "0%",
+                  color: "#1C1C1C80",
+                }}
+              >
                 Leverage existing Pharos validators to restake into Special
                 Processing Networks for enhanced yield generation.
               </p>
@@ -367,10 +417,26 @@ const FeaturesSection = () => {
                   className="w-full h-full object-cover" 
                 />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4 leading-tight">
+              <h3 
+                className="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4 leading-tight"
+                style={{
+                  fontFamily: "Gotham, sans-serif",
+                }}
+              >
                 No Liquidity Lockups
               </h3>
-              <p className="text-sm md:text-base lg:text-lg text-gray-600 leading-relaxed">
+              <p 
+                className="leading-relaxed"
+                style={{
+                  fontFamily: "Gotham, sans-serif",
+                  fontWeight: 325,
+                  fontStyle: "Book",
+                  fontSize: "18px",
+                  lineHeight: "100%",
+                  letterSpacing: "0%",
+                  color: "#1C1C1C80",
+                }}
+              >
                 Trade, lend, or use yPHR in DeFi protocols immediately without
                 waiting for unbonding periods.
               </p>
@@ -387,10 +453,26 @@ const FeaturesSection = () => {
                   className="w-full h-full object-cover" 
                 />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4 leading-tight">
+              <h3 
+                className="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4 leading-tight"
+                style={{
+                  fontFamily: "Gotham, sans-serif",
+                }}
+              >
                 Transparent Rewards
               </h3>
-              <p className="text-sm md:text-base lg:text-lg text-gray-600 leading-relaxed">
+              <p 
+                className="leading-relaxed"
+                style={{
+                  fontFamily: "Gotham, sans-serif",
+                  fontWeight: 325,
+                  fontStyle: "Book",
+                  fontSize: "18px",
+                  lineHeight: "100%",
+                  letterSpacing: "0%",
+                  color: "#1C1C1C80",
+                }}
+              >
                 Track all rewards through our internal rPHR ledger system with
                 complete transparency and real-time updates.
               </p>
@@ -407,10 +489,26 @@ const FeaturesSection = () => {
                   className="w-full h-full object-cover" 
                 />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4 leading-tight">
+              <h3 
+                className="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4 leading-tight"
+                style={{
+                  fontFamily: "Gotham, sans-serif",
+                }}
+              >
                 Native Security
               </h3>
-              <p className="text-sm md:text-base lg:text-lg text-gray-600 leading-relaxed">
+              <p 
+                className="leading-relaxed"
+                style={{
+                  fontFamily: "Gotham, sans-serif",
+                  fontWeight: 325,
+                  fontStyle: "Book",
+                  fontSize: "18px",
+                  lineHeight: "100%",
+                  letterSpacing: "0%",
+                  color: "#1C1C1C80",
+                }}
+              >
                 Built natively on Pharos with no bridge dependencies, ensuring
                 maximum security and decentralization.
               </p>
@@ -427,10 +525,26 @@ const FeaturesSection = () => {
                   className="w-full h-full object-cover" 
                 />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4 leading-tight">
+              <h3 
+                className="text-xl md:text-2xl font-bold text-gray-900 mb-3 md:mb-4 leading-tight"
+                style={{
+                  fontFamily: "Gotham, sans-serif",
+                }}
+              >
                 Ecosystem Growth
               </h3>
-              <p className="text-sm md:text-base lg:text-lg text-gray-600 leading-relaxed">
+              <p 
+                className="leading-relaxed"
+                style={{
+                  fontFamily: "Gotham, sans-serif",
+                  fontWeight: 325,
+                  fontStyle: "Book",
+                  fontSize: "18px",
+                  lineHeight: "100%",
+                  letterSpacing: "0%",
+                  color: "#1C1C1C80",
+                }}
+              >
                 Participate in Pharos ecosystem expansion while contributing to
                 network security and earning rewards.
               </p>
