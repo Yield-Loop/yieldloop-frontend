@@ -51,7 +51,7 @@ const footerColumns: FooterColumn[] = [
 
 export function Footer() {
   return (
-    <footer className="text-gray-300" style={{ backgroundColor: '#1a1b3a' }}>
+    <footer className="text-gray-300 mt-[100px]" style={{ backgroundColor: '#1a1b3a' }}>
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           {/* Brand Section */}

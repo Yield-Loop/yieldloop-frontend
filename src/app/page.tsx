@@ -7,6 +7,7 @@ import FeaturesSection from '@/components/landing/FeaturesSection';
 // Layout Components
 // import Header from '@/components/layout/Header';
 import HowItWorks from '@/components/landing/HowItWorks';
+import HowLqd from '@/components/landing/HowLqd';
 import {Footer} from '@/components/layout/Footer';
 
 
@@ -30,9 +31,13 @@ export default function Home() {
         {/* Stats Section - Key metrics and numbers */}
         {/* <StatsSection /> */}
 
-        {/* Call to Action Section - Final CTA */}
-             <HowItWorks />
+       
         
+        {/* How It Works Section */}
+        <HowItWorks />
+
+         {/* How Liquid Restaking Section */}
+         <HowLqd />
       </main>
      <Footer />
     </div>
